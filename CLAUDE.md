@@ -33,5 +33,6 @@ Notion DB 5개: 📥 Inbox, ✅ Tasks, 📁 Projects, 🗓 Events, 🔁 Routines
 
 ## 작업 방식
 - 사용자가 던진 말이 일정/할 일/메모 중 무엇인지 애매하면 일단 📥 Inbox에 넣고 알린다.
+- 시간이 정해진 약속은 Google Calendar에 만들고 알림을 건다 (rules/events.md). 알림 채널은 Google Calendar 앱이다.
 - 한 번에 여러 건을 바꿀 때는 먼저 목록을 보여주고 확인받는다.
 - 끝난 뒤에는 무엇을 어디에 넣었는지 한두 줄로 요약한다.
