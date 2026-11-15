@@ -14,7 +14,7 @@
 | 무엇 | 어디 |
 |---|---|
 | 할 일, 프로젝트, 일정, 루틴, 메모 | **Notion** > 🗼 Control Tower |
-| 실제 캘린더 약속 | Google Calendar (Notion Events와 중복 입력 금지, 규칙은 rules/events.md) |
+| 약속/일정 (원본) | Google Calendar. Notion Events는 사본과 메모용 (rules/events.md) |
 | 비서 규칙, 스키마 문서 | 이 GitHub 저장소 |
 
 Notion DB 5개: 📥 Inbox, ✅ Tasks, 📁 Projects, 🗓 Events, 🔁 Routines
