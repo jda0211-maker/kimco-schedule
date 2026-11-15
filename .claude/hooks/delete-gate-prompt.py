@@ -9,7 +9,7 @@ try:
 except Exception:
     prompt = ""
 
-allowed = bool(re.search(r"삭제", prompt) and re.search(r"(너가|네가|니가|너 ?가)\s*해\s*줘|해\s*줘", prompt) and re.search(r"(너가|네가|니가)\s*해\s*줘", prompt))
+allowed = bool(re.search(r"삭제", prompt) and re.search(r"(너가|네가|니가)\s*해\s*줘", prompt))
 if allowed:
     open(FLAG, "w").write("1")
 else:
