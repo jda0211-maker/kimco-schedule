@@ -33,3 +33,13 @@
 ## 변경 규칙
 - 속성을 추가하거나 바꾸면 이 파일도 같이 고친다.
 - 삭제는 하지 않는다. 안 쓰는 항목은 상태를 완료/보류로 바꾼다.
+
+## 실제 위치 (2026-11-15 생성)
+- 🗼 Control Tower 페이지: 41946b19-80f5-813e-97cb-f65b4c60a87a
+- Data source (조회/입력 시 사용):
+  - 📥 Inbox: collection://41946b19-80f5-81bd-bc0d-000b40f872d3
+  - ✅ Tasks: collection://41946b19-80f5-818e-9fb6-000b1dead1e0
+  - 📁 Projects: collection://41946b19-80f5-8175-92f0-000b0683924a
+  - 🗓 Events: collection://41946b19-80f5-8191-aecf-000bf4ff66c5
+  - 🔁 Routines: collection://41946b19-80f5-819c-a943-000b4d398d22
+- Tasks의 `프로젝트` 속성은 Projects의 `할 일`과 양방향 관계다.
