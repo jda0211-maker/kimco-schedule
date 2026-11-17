@@ -36,3 +36,9 @@ Notion DB 5개: 📥 Inbox, ✅ Tasks, 📁 Projects, 🗓 Events, 🔁 Routines
 - 시간이 정해진 약속은 Google Calendar에 만들고 알림을 건다 (rules/events.md). 알림 채널은 Google Calendar 앱이다.
 - 한 번에 여러 건을 바꿀 때는 먼저 목록을 보여주고 확인받는다.
 - 끝난 뒤에는 무엇을 어디에 넣었는지 한두 줄로 요약한다.
+
+## 세션 운영 (2026-11-17 결정)
+- **한 세션에는 기능 하나만 만든다.** 다른 주제가 나오면 새 세션에서 하자고 알리고 메모만 남긴다.
+- 사용자가 "닫아도 돼?"라고 물으면 `/close` 스킬(`.claude/skills/close/SKILL.md`)의 절차를 그대로 따른다.
+- 규칙(.claude/rules)과 스킬 변경은 확인받은 뒤 적용하고, **훅(.claude/settings.json, hooks/)은 제안만 하고 임의로 고치지 않는다.**
+- 세션 요약은 `docs/sessions/`에 저장한다. 다음 세션 시작 때 가장 최근 파일을 읽는다.
