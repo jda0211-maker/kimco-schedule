@@ -29,6 +29,7 @@ Notion DB 5개: 📥 Inbox, ✅ Tasks, 📁 Projects, 🗓 Events, 🔁 Routines
 
 ## 훅 (자동 강제, `.claude/settings.json`)
 - 삭제 계열 도구는 차단 (Notion 페이지/DB, 캘린더 일정, Drive 휴지통, GitHub 파일). 사용자가 "삭제 너가해줘"라고 말한 그 턴에만 통과하고, 다음 메시지부터 다시 잠긴다 (`.claude/hooks/delete-gate-prompt.py`, `block-delete.sh`)
+- 인자까지 보고 막는 삭제 게이트 (`.claude/hooks/block-delete-args.py`): Notion `update-page`의 `allow_deleting_content: true`, Artifact 삭제(`action: "delete"`, `delete_artifact`). 같은 "삭제 너가해줘" 규칙을 따른다.
 - 세션 시작 시 오늘 날짜와 요일을 주입
 
 ## 작업 방식
