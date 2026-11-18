@@ -9,6 +9,15 @@
             "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/block-delete.sh"
           }
         ]
+      },
+      {
+        "matcher": "mcp__Notion__notion-update-page|Artifact|mcp__claude-artifacts__delete_artifact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/block-delete-args.py"
+          }
+        ]
       }
     ],
     "SessionStart": [

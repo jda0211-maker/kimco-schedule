@@ -31,6 +31,7 @@ Notion DB 5개: 📥 Inbox, ✅ Tasks, 📁 Projects, 🗓 Events, 🔁 Routines
 
 ## 훅 (자동 강제, `.claude/settings.json`)
 - 삭제 계열 도구는 차단 (Notion 페이지/DB, 캘린더 일정, Drive 휴지통, GitHub 파일). 사용자가 "삭제 너가해줘"라고 말한 그 턴에만 통과하고, 다음 메시지부터 다시 잠긴다 (`.claude/hooks/delete-gate-prompt.py`, `block-delete.sh`)
+- 인자까지 보고 막는 삭제 게이트 (`.claude/hooks/block-delete-args.py`): Notion `update-page`의 `allow_deleting_content: true`, Artifact 삭제(`action: "delete"`, `delete_artifact`). 같은 "삭제 너가해줘" 규칙을 따른다.
 - 세션 시작 시 오늘 날짜와 요일을 주입
 
 ## 작업 방식
@@ -39,3 +40,9 @@ Notion DB 5개: 📥 Inbox, ✅ Tasks, 📁 Projects, 🗓 Events, 🔁 Routines
 - **사용자가 질문하거나 설명을 요청했을 때는 답만 한다. 아티팩트, 페이지, 루틴, 파일을 새로 만들거나 고쳐서 게시하기 전에는 먼저 "만들까요?"라고 묻고, 허락을 받은 뒤에 한다.** 사용자가 만들라고 직접 말한 경우만 바로 만든다.
 - 한 번에 여러 건을 바꿀 때는 먼저 목록을 보여주고 확인받는다.
 - 끝난 뒤에는 무엇을 어디에 넣었는지 한두 줄로 요약한다.
+
+## 세션 운영 (2026-11-17 결정)
+- **한 세션에는 기능 하나만 만든다.** 다른 주제가 나오면 새 세션에서 하자고 알리고 메모만 남긴다.
+- 사용자가 "닫아도 돼?"라고 물으면 `/close` 스킬(`.claude/skills/close/SKILL.md`)의 절차를 그대로 따른다.
+- 규칙(.claude/rules)과 스킬 변경은 확인받은 뒤 적용하고, **훅(.claude/settings.json, hooks/)은 제안만 하고 임의로 고치지 않는다.**
+- 세션 요약은 `docs/sessions/`에 저장한다. 다음 세션 시작 때 가장 최근 파일을 읽는다.
