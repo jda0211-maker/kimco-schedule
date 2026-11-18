@@ -24,7 +24,9 @@ Notion DB 5개: 📥 Inbox, ✅ Tasks, 📁 Projects, 🗓 Events, 🔁 Routines
 - `.claude/rules/inbox.md`: 메모를 분류하는 방법 (Inbox 처리할 때)
 - `.claude/rules/tasks.md`: 마감일, 우선순위 기준
 - `.claude/rules/events.md`: 일정 입력, 캘린더 연동 기준
-- `.claude/rules/work-home.md`: 회사/집 구분 기준
+- `.claude/rules/work.md`: 회사 영역 정의와 회사 전용 규칙
+- `.claude/rules/home.md`: 집 영역 정의와 집 전용 규칙
+- `.claude/rules/work-home.md`: 공통 영역, 회사/집이 애매하거나 겹칠 때 기준
 - `.claude/rules/briefing.md`: 아침 브리핑, 주간 리뷰 형식
 
 ## 훅 (자동 강제, `.claude/settings.json`)
